@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="Resume.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resumeForm">
+            <h2>Contact Information</h2>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone" required>
+            
+            <h2>Summary</h2>
+            <textarea id="summary" placeholder="Professional Summary" required></textarea>
+            
+            <h2>Work Experience</h2>
+            <div id="workExperience">
+                <div class="work-entry">
+                    <input type="text" class="company" placeholder="Company" required>
+                    <input type="text" class="role" placeholder="Role" required>
+                    <input type="text" class="duration" placeholder="Duration" required>
+                    <textarea class="description" placeholder="Description" required></textarea>
+                    <button type="button" class="remove-work">Remove</button>
+                </div>
+            </div>
+            <button type="button" id="addWork">Add Work Experience</button>
+            
+            <h2>Education</h2>
+            <div id="education">
+                <div class="education-entry">
+                    <input type="text" class="institution" placeholder="Institution" required>
+                    <input type="text" class="degree" placeholder="Degree" required>
+                    <input type="text" class="ed-duration" placeholder="Duration" required>
+                    <button type="button" class="remove-education">Remove</button>
+                </div>
+            </div>
+            <button type="button" id="addEducation">Add Education</button>
+            
+            <h2>Skills</h2>
+            <div id="skills">
+                <div class="skill-entry">
+                    <input type="text" class="skill" placeholder="Skill" required>
+                    <button type="button" class="remove-skill">Remove</button>
+                </div>
+            </div>
+            <button type="button" id="addSkill">Add Skill</button>
+            
+            <button type="submit">Generate Resume</button>
+        </form>
+        <button id="printResume">Print Resume</button>
+        
+        <div id="resumeOutput"></div>
+    </div>
+    
+    <script src="Resume.js"></script>
+</body>
+</html>
